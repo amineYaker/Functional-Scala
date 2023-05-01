@@ -35,11 +35,6 @@ object StringEncoder extends ByteEncoder[String] {
   override def encode(a: String): Array[Byte] = a.getBytes()
 }
 
-case class Switch( isOn : Boolean)
-object SwitchByteEncoder extends ByteEncoder[Switch] {
-  override def encode(a: Switch): Array[Byte] = 
-    a.isOn match {
-      case true => Array(Byte('1'))
-      case _ => Array(Byte('0'))
-    }
-}
+
+val test = List(1,2,3)
+test.reverse
